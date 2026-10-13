@@ -70,8 +70,6 @@ Instead of editing one bit string once, the program maintains a population of si
 **Explain:** The algorithm does not guarantee finding 1111 within the budget because the search is stochastic: mutation may never flip the needed bit, crossover can only mix genes that parents already carry, and with a small population tournament selection can lose a good gene by chance - the 20-generation limit simply stops the loop, reached goal or not, and a guarantee would require exhaustively checking all 16 strings, which defeats the purpose of a search. Random exploration helps because selection alone can stall: if no candidate has a 1 in some position, crossover can never create one, so blind mutation is the only source of new genetic material. But the same blindness can make candidates worse - flipping a 1 to 0 in 1110 drops fitness from 3 to 2 - which is why elitism matters: the champion survives unchanged, so the population can never regress below its current best, and worse individuals exist only as exploration noise to be filtered by selection.
 
 
-# Task 2 - Fill In The Blank
-
 # Task 2 - Fill in the blank
 
 ## A - Git and GitHub (terminal)
